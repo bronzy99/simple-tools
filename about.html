@@ -142,20 +142,6 @@
     &copy; 2025 Simple Tools Hub. All rights reserved.
   </footer>
 
-  <script>
-    function updateCount() {
-      const text = document.getElementById('textInput').value;
-      const charCount = text.length;
-      const charNoSpaces = text.replace(/\s/g, '').length;
-      const wordCount = text.trim().length ? text.trim().split(/\s+/).length : 0;
-      const lineCount = text.split(/\r\n|\r|\n/).length;
-
-      document.getElementById('charCount').innerText = charCount;
-      document.getElementById('charNoSpaces').innerText = charNoSpaces;
-      document.getElementById('wordCount').innerText = wordCount;
-      document.getElementById('lineCount').innerText = lineCount;
-    }
-  </script>
 
 </body>
 </html>
