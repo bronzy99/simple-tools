@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
+  <title>Character Counter – Count Characters, Words & Lines Online</title>
 
-  <meta name="description" content="Learn more about [Your Name/Website Name], my background, skills, and interests." />
-  <meta name="keywords" content="about me, [Your Name], personal website, background, skills, interests, portfolio" />
-  <meta name="author" content="[Your Name]" />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Free online character counter. Count characters, words, and lines instantly with our fast, browser-based tool. Perfect for tweets, SMS, essays, and more.">
+  <meta name="keywords" content="character counter, word count tool, line counter, free online tool, count characters, twitter text limit, sms limit checker">
+  <meta name="author" content="Simple Tools Hub">
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="About Me - [Your Name]" />
-  <meta property="og:description" content="Discover my journey, expertise, and passions." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/about" /> <meta property="og:image" content="https://yourdomain.com/your-profile-image.jpg" /> <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About [Your Name]" />
-  <meta name="twitter:description" content="Connect with me and learn about my professional journey and personal interests." />
-  <meta name="twitter:image" content="https://yourdomain.com/your-profile-image.jpg" /> <style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Online Character Counter">
+  <meta property="og:description" content="Instantly count characters, words, and lines. Useful for tweets, SMS, and SEO text limits.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/character_counter.html">
+  <meta property="og:image" content="https://yourdomain.com/preview-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Character Counter Tool">
+  <meta name="twitter:description" content="Use this tool to count characters, words, and lines in your text for tweets, SMS, blog posts and more.">
+  <meta name="twitter:image" content="https://yourdomain.com/preview-image.jpg">
+
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -48,12 +56,6 @@
     nav a:hover {
       background: #1565c0;
     }
-     /* Added style for highlighting the active nav link - you can add this class to the 'About' link */
-     nav a.active {
-        background: #1565c0; /* Or a slightly different color */
-        font-weight: bold;
-     }
-
 
     main {
       padding: 2rem;
@@ -65,28 +67,24 @@
       margin-top: 2rem;
     }
 
-    /* Styles specific to the About Me content */
-    .about-section h2 {
-        color: #1e88e5; /* Match header color */
-        margin-bottom: 1rem;
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      resize: vertical;
+      border-radius: 6px;
+      border: 1px solid #ccc;
     }
 
-    .about-section p {
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
+    .result {
+      margin-top: 1rem;
+      background: #e3f2fd;
+      padding: 1rem;
+      border-radius: 6px;
+      line-height: 1.6;
     }
-
-    /* You could add styles for an image if you include one */
-    /*
-    .about-section img {
-        max-width: 200px;
-        height: auto;
-        border-radius: 50%; /* Example: round image */
-        margin: 0 auto 1.5rem auto; /* Center image and add space below */
-        display: block;
-    }
-    */
-
 
     footer {
       text-align: center;
@@ -108,38 +106,67 @@
 <body>
 
   <header>
-    <h1>[Your Name or Website Title]</h1> <p>[Your Tagline or Title, e.g., Developer, Designer, Writer]</p> </header>
+    <h1>Simple Tools Hub</h1>
+    <p>Free Character & Word Counter Tool</p>
+  </header>
 
   <nav>
-    <a href="#">Home</a> <a href="#">Blog</a>
-    <a href="#">Projects</a>
-    <a href="#" class="active">About</a> <a href="#">Contact</a>
+    <a href="index.html">Word Counter</a>
+    <a href="password_generator.html">Password Generator</a>
+    <a href="text_case_converter.html">Case Converter</a>
+    <a href="character_counter.html">Character Counter</a>
+    <a href="#">Lorem Ipsum</a>
   </nav>
 
   <main>
-    <section class="about-section">
-      <h2>About Me</h2>
+    <h2>Character Counter – Count Characters, Words, and Lines</h2>
+    <p>Paste your text below to see the total characters, words, and lines instantly.</p>
 
+    <textarea id="textInput" oninput="updateCount()" placeholder="Start typing or paste text here..."></textarea>
+
+    <div class="result">
+      <strong>Characters (with spaces):</strong> <span id="charCount">0</span><br>
+      <strong>Characters (no spaces):</strong> <span id="charNoSpaces">0</span><br>
+      <strong>Words:</strong> <span id="wordCount">0</span><br>
+      <strong>Lines:</strong> <span id="lineCount">0</span>
+    </div>
+
+    <section style="margin-top: 2rem;">
+      <h3>Why Use This Character Counter?</h3>
       <p>
-        Welcome to my corner of the internet! I'm [Your Name], and I'm passionate about [Your main passion/field]. I created this site to share my journey, projects, and thoughts on [mention relevant topics].
+        This free online character counter helps writers, students, marketers, and developers keep track of character limits in tweets, SMS messages, essays, and code. It’s lightweight, fast, and runs completely in your browser.
       </p>
 
-      <p>
-        With a background in [Your field/education], I've spent the last [Number] years [Your experience, e.g., working on innovative software solutions, designing user-centric experiences, crafting engaging content]. My expertise includes [List 2-3 key skills or areas of expertise, e.g., Web Development, UI/UX Design, Digital Marketing]. I'm always eager to learn new technologies and explore creative challenges.
-      </p>
+      <h3>Common Use Cases:</h3>
+      <ul>
+        <li>Composing tweets or posts under platform character limits</li>
+        <li>Writing SMS or WhatsApp messages</li>
+        <li>Checking SEO meta descriptions</li>
+        <li>Monitoring input limits in online forms</li>
+      </ul>
 
-      <p>
-        Outside of work, you can find me [Mention a hobby or interest, e.g., hiking in the mountains, experimenting in the kitchen, reading sci-fi novels]. I believe in [Mention a core value or philosophy, e.g., continuous learning, building community, solving problems with technology].
-      </p>
-
-      <p>
-        Thanks for stopping by! Feel free to explore my projects, read my blog posts, or get in touch if you'd like to connect.
-      </p>
+      <p>Whether you’re writing professionally or just trying to be concise, this tool gives you instant insights into your text. Try it now—no login required!</p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 [Your Name or Website Title]. All rights reserved. </footer>
+    &copy; 2025 Simple Tools Hub. All rights reserved.
+  </footer>
 
-  </body>
+  <script>
+    function updateCount() {
+      const text = document.getElementById('textInput').value;
+      const charCount = text.length;
+      const charNoSpaces = text.replace(/\s/g, '').length;
+      const wordCount = text.trim().length ? text.trim().split(/\s+/).length : 0;
+      const lineCount = text.split(/\r\n|\r|\n/).length;
+
+      document.getElementById('charCount').innerText = charCount;
+      document.getElementById('charNoSpaces').innerText = charNoSpaces;
+      document.getElementById('wordCount').innerText = wordCount;
+      document.getElementById('lineCount').innerText = lineCount;
+    }
+  </script>
+
+</body>
 </html>
