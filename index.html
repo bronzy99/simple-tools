@@ -1,21 +1,195 @@
-<html>
-<body>
-    <textarea id="text-input" rows="4" cols="50">Hello, world! This is text-to-speech using Puter.js.</textarea>
-    <br>
-    <button id="speak-button">Speak</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Word Counter Tool Online – Count Words, Characters & Paragraphs</title>
 
-    <script src="https://js.puter.com/v2/"></script>
-    <script>
-        document.getElementById('speak-button').addEventListener('click', () => {
-            const text = document.getElementById('text-input').value;
-            puter.ai.txt2speech(text)
-                .then((audio) => {
-                    audio.play();
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        });
-    </script>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Use our free online Word Counter tool to count words, characters, sentences, and paragraphs instantly. Perfect for writers, students, and SEO professionals.">
+  <meta name="keywords" content="word counter, online word counter, character counter, count words, count characters, text counter, paragraph counter, sentence counter, SEO word counter">
+  <meta name="author" content="Simple Tools Hub">
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Online Word Counter Tool">
+  <meta property="og:description" content="Instant word and character count for writers, students, and content creators. No login, no ads.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:image" content="https://yourdomain.com/preview-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online Word Counter – Count Words, Characters & More">
+  <meta name="twitter:description" content="Try our fast, free word counter tool – perfect for social media, blogging, essays, and SEO.">
+  <meta name="twitter:image" content="https://yourdomain.com/preview-image.jpg">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #1e88e5;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0d47a1;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #1565c0;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    .results {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .results div {
+      flex: 1 1 150px;
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Simple Tools Hub</h1>
+    <p>Free Online Word Counter Tool & More</p>
+  </header>
+
+  <nav>
+    <a href="#">Word Counter</a>
+    <a href="#password-generator">Password Generator</a>
+    <a href="#text-case-converter">Case Converter</a>
+    <a href="#char-counter">Character Counter</a>
+    <a href="#lorem-ipsum">Lorem Ipsum</a>
+  </nav>
+
+  <main>
+    <h2 id="word-counter">Free Online Word Counter Tool</h2>
+    <p>Type or paste your text into the box below, and get real-time statistics on word count, character count, sentences, and paragraphs.</p>
+
+    <textarea id="text-input" placeholder="Start typing or paste your text here..."></textarea>
+
+    <div class="results">
+      <div><strong id="wordCount">0</strong><br>Words</div>
+      <div><strong id="charCount">0</strong><br>Characters</div>
+      <div><strong id="sentenceCount">0</strong><br>Sentences</div>
+      <div><strong id="paraCount">0</strong><br>Paragraphs</div>
+    </div>
+
+    <section style="margin-top: 2rem;">
+      <h3>What is a Word Counter?</h3>
+      <p>
+        A word counter is a free online tool that helps you calculate the number of words, characters, sentences, and paragraphs in a block of text. It’s useful for students writing essays, content creators optimizing blog posts, SEO professionals analyzing keyword density, and even Twitter users managing character limits.
+      </p>
+
+      <h3>Why Use Our Free Word Counter Tool?</h3>
+      <ul>
+        <li><strong>Fast & Lightweight:</strong> Works instantly in your browser.</li>
+        <li><strong>Completely Free:</strong> No ads, no login, no nonsense.</li>
+        <li><strong>SEO-Friendly:</strong> Perfect for optimizing your content length and keyword usage.</li>
+        <li><strong>Mobile-Friendly:</strong> Use it from any device, anytime.</li>
+      </ul>
+
+      <h3>Common Uses:</h3>
+      <ul>
+        <li>Counting words in an essay or report</li>
+        <li>Tracking characters for social media posts</li>
+        <li>Analyzing blog post length for SEO</li>
+        <li>Checking word limits for college applications or articles</li>
+      </ul>
+
+      <p>
+        Whether you're a content writer, marketer, developer, or student, our <strong>free word counter</strong> will help you stay on track. Bookmark this tool for daily use.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Simple Tools Hub. All rights reserved.
+  </footer>
+
+  <script>
+    const textarea = document.getElementById('text-input');
+    const wordCount = document.getElementById('wordCount');
+    const charCount = document.getElementById('charCount');
+    const sentenceCount = document.getElementById('sentenceCount');
+    const paraCount = document.getElementById('paraCount');
+
+    textarea.addEventListener('input', () => {
+      const text = textarea.value.trim();
+
+      wordCount.textContent = text ? text.split(/\s+/).length : 0;
+      charCount.textContent = text.length;
+
+      const sentences = text.match(/[^.!?]+[.!?]+/g);
+      sentenceCount.textContent = sentences ? sentences.length : 0;
+
+      const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
+      paraCount.textContent = paragraphs.length;
+    });
+  </script>
+
 </body>
 </html>
