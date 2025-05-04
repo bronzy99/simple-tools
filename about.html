@@ -3,40 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn more about our free online tools including word counter, password generator, and more.">
-  <title>About Us | Simple Web Tools</title>
-  <link rel="stylesheet" href="style.css">
+  <title>About Me</title>
+
+  <meta name="description" content="Learn more about [Your Name/Website Name], my background, skills, and interests." />
+  <meta name="keywords" content="about me, [Your Name], personal website, background, skills, interests, portfolio" />
+  <meta name="author" content="[Your Name]" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="About Me - [Your Name]" />
+  <meta property="og:description" content="Discover my journey, expertise, and passions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/about" /> <meta property="og:image" content="https://yourdomain.com/your-profile-image.jpg" /> <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About [Your Name]" />
+  <meta name="twitter:description" content="Connect with me and learn about my professional journey and personal interests." />
+  <meta name="twitter:image" content="https://yourdomain.com/your-profile-image.jpg" /> <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #1e88e5;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0d47a1;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #1565c0;
+    }
+     /* Added style for highlighting the active nav link - you can add this class to the 'About' link */
+     nav a.active {
+        background: #1565c0; /* Or a slightly different color */
+        font-weight: bold;
+     }
+
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    /* Styles specific to the About Me content */
+    .about-section h2 {
+        color: #1e88e5; /* Match header color */
+        margin-bottom: 1rem;
+    }
+
+    .about-section p {
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    /* You could add styles for an image if you include one */
+    /*
+    .about-section img {
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%; /* Example: round image */
+        margin: 0 auto 1.5rem auto; /* Center image and add space below */
+        display: block;
+    }
+    */
+
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>About Simple Web Tools</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="password_generator.html">Password Generator</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </nav>
-  </header>
+    <h1>[Your Name or Website Title]</h1> <p>[Your Tagline or Title, e.g., Developer, Designer, Writer]</p> </header>
+
+  <nav>
+    <a href="#">Home</a> <a href="#">Blog</a>
+    <a href="#">Projects</a>
+    <a href="#" class="active">About</a> <a href="#">Contact</a>
+  </nav>
 
   <main>
-    <section>
-      <p>Welcome to <strong>Simple Web Tools</strong> — your one-stop destination for fast, reliable, and user-friendly online utilities.</p>
+    <section class="about-section">
+      <h2>About Me</h2>
 
-      <p>Our goal is to provide free, accessible tools that help you save time and improve productivity. Whether you're counting words, generating secure passwords, converting text case, or just need placeholder text — we've got you covered.</p>
+      <p>
+        Welcome to my corner of the internet! I'm [Your Name], and I'm passionate about [Your main passion/field]. I created this site to share my journey, projects, and thoughts on [mention relevant topics].
+      </p>
 
-      <p>All our tools are 100% free to use, require no installation, and work directly in your browser on any device.</p>
+      <p>
+        With a background in [Your field/education], I've spent the last [Number] years [Your experience, e.g., working on innovative software solutions, designing user-centric experiences, crafting engaging content]. My expertise includes [List 2-3 key skills or areas of expertise, e.g., Web Development, UI/UX Design, Digital Marketing]. I'm always eager to learn new technologies and explore creative challenges.
+      </p>
 
-      <p><strong>Why choose us?</strong></p>
-      <ul>
-        <li>Clean, simple, and fast interface</li>
-        <li>No unnecessary ads or popups</li>
-        <li>Mobile-friendly and secure</li>
-        <li>Constantly updated and improved</li>
-      </ul>
+      <p>
+        Outside of work, you can find me [Mention a hobby or interest, e.g., hiking in the mountains, experimenting in the kitchen, reading sci-fi novels]. I believe in [Mention a core value or philosophy, e.g., continuous learning, building community, solving problems with technology].
+      </p>
 
-      <p>Thank you for using our tools! We’re always looking for ways to improve, so feel free to reach out through our <a href="contact.html">Contact page</a>.</p>
+      <p>
+        Thanks for stopping by! Feel free to explore my projects, read my blog posts, or get in touch if you'd like to connect.
+      </p>
     </section>
   </main>
-</body>
+
+  <footer>
+    &copy; 2025 [Your Name or Website Title]. All rights reserved. </footer>
+
+  </body>
 </html>
